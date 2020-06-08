@@ -10,3 +10,18 @@
     justify-items: center;
     grid-row-gap: 10px;
 }
+
+.unrent, .rent{
+    background-color: azure;
+    color: black;
+    border-radius: 50%;
+    position: relative;
+    right: -215px;
+    top: -240px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
