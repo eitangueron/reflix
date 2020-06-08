@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
-import '../styles/Movie.css'
+import '../styles/Movies.css'
 import {Link} from 'react-router-dom'
 
   class Movie extends Component {
     
-    constructor(){
-        super()
-    }
 
     changeMovieStatus = () => {
         this.props.changeMovieStatus(this.props.movieInfo.id)

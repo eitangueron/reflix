@@ -1,0 +1,37 @@
+.movie img{
+    height: 250px;
+    width: 250px;
+    border-radius: 11%;
+}
+
+#movies-catalog, #rented-movies{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    grid-row-gap: 10px;
+}
+
+#nav-bar{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#nav-bar h5{
+justify-self: end;
+margin-right: 2%;
+}
+
+.unrent, .rent{
+    background-color: azure;
+    color: black;
+    border-radius: 50%;
+    position: relative;
+    right: -215px;
+    top: -240px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+

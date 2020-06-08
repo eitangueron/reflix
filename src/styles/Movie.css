@@ -1,27 +1,9 @@
-.movie img{
-    height: 250px;
-    width: 250px;
-    border-radius: 11%;
+.movie-img{
+    width:200px;
+    height: 200px;
 }
 
-#movies-catalog{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
-    grid-row-gap: 10px;
-}
-
-.unrent, .rent{
-    background-color: azure;
-    color: black;
-    border-radius: 50%;
-    position: relative;
-    right: -215px;
-    top: -240px;
-    width: 20px;
-    height: 20px;
+.movie{
     text-align: center;
-    font-weight: bold;
-    cursor: pointer;
 }
 

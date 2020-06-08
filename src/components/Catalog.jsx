@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Movie from './Movie'
+import Movie from './Movies'
 
   class Catalog extends Component {
 
@@ -14,12 +14,24 @@ import Movie from './Movie'
     }
 
     render() {
+      const rentedMovies = this.props.moviesData.filter(movie => movie.isRented)
+      const notRentedMovies = this.props.moviesData.filter(movie => !movie.isRented)
     return (
           <div id='catalog'>
-            <input type="text" id='search-bar' placeholder='Search'/>
+            <div id="nav-bar">
+              <input type="text" id='search-bar' placeholder='Search'/>
+              <h5>Budget: ${this.props.budget}.00</h5>
+            </div>
+            <h5>Rented:</h5>
+            <div id="rented-movies">
+              {rentedMovies.length ? 
+              rentedMovies.map((movie,i)=> <Movie key={movie.title +' info rented'+ i} movieInfo={movie} changeMovieStatus={this.changeMovieStatus}/>)
+              : <h2>No movies rented yet..</h2>
+              }
+            </div>
             <h5>Catalog:</h5>
             <div id="movies-catalog">
-              {this.props.moviesData.map((movie,i) => <Movie key={movie.title +' info'+ i} movieInfo={movie} changeMovieStatus={this.changeMovieStatus}/>)}
+              {notRentedMovies.map((movie,i) => <Movie key={movie.title +' info'+ i} movieInfo={movie} changeMovieStatus={this.changeMovieStatus}/>)}
             </div>
           </div>
 

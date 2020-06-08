@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
+import '../styles/Movie.css'
 
   class MovieDetail extends Component {
   
     render() {
-        console.log(this.props.match)
-        console.log(this.props.movieInfo)
-    return <div>
-
+        const movieData = this.props.moviesData.find(movie => movie.id == this.props.match.params.id)
+    return <div className='movie'>
+            <h2>{movieData.title} {' ('}{movieData.year}{')'}</h2>
+            <img src={movieData.img} className='movie-img'/>
+            <p>{movieData.descrShort}</p>
         </div>
     }
     
