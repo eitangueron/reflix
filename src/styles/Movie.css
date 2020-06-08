@@ -1,0 +1,12 @@
+.movie img{
+    height: 250px;
+    width: 250px;
+    border-radius: 11%;
+}
+
+#movies-catalog{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    grid-row-gap: 10px;
+}
